@@ -9,11 +9,11 @@ app.post('/dialogflow', (req, res) => {
         result.json().then(body => {
             res.json({
                 "fulfillmentMessages": [
-                  {
-                    "image": {
-                      "imageUri": body.image
+                    {
+                        "text": {
+                            "text": [body.answer]
+                        }
                     }
-                  }
                 ],
               });
         }).catch(error => {
