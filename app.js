@@ -12,6 +12,9 @@ app.post('/dialogflow', (req, res) => {
                   {
                     "image": {
                       "imageUri": body.image
+                    },
+                    "text": {
+                        text: ["dummy text"]
                     }
                   }
                 ],
