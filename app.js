@@ -11,6 +11,7 @@ app.post('/dialogflow', (req, res) => {
             res.json({
                 "fulfillmentMessages": [
                     {
+                        "platform": "ACTIONS_ON_GOOGLE",
                         "text": {
                             "text": [body.answer]
                         }
@@ -21,6 +22,7 @@ app.post('/dialogflow', (req, res) => {
             res.json({
                 "fulfillmentMessages": [
                     {
+                        "platform": "ACTIONS_ON_GOOGLE",
                         "text": {
                             "text": ["unable to reach the server."]
                         }
