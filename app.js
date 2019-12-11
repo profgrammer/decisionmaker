@@ -23,7 +23,9 @@ app.post('/dialogflow', (req, res) => {
             res.json({
                 "fulfillmentMessages": [
                     {
-                        "text": "unable to reach the server."
+                        "text": {
+                            "text": "unable to reach the server."
+                        }
                     }
                 ]
             })
