@@ -2,8 +2,9 @@ const express = require('express');
 const app = express();
 const bp = require('body-parser');
 const fetch = require('node-fetch');
+const morgan = require('morgan');
 app.use(bp.json());
-
+app.use(morgan('dev'));
 app.post('/dialogflow', (req, res) => {
     fetch('https://yesno.wtf/api').then(result => {
         result.json().then(body => {
