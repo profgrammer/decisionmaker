@@ -12,9 +12,6 @@ app.post('/dialogflow', (req, res) => {
                   {
                     "image": {
                       "imageUri": body.image
-                    },
-                    "text": {
-                        text: ["dummy text"]
                     }
                   }
                 ],
@@ -24,7 +21,7 @@ app.post('/dialogflow', (req, res) => {
                 "fulfillmentMessages": [
                     {
                         "text": {
-                            "text": "unable to reach the server."
+                            "text": ["unable to reach the server."]
                         }
                     }
                 ]
